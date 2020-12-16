@@ -1,0 +1,33 @@
+@import "../../../../assets/scss/mixin.scss";
+.modal {
+  .paper {
+    &.rename-folder-modal {
+      width: 325px;
+      min-height: auto;
+      .modalBody {
+        input {
+          padding: 0 15px;
+        }
+        label {
+          position: absolute;
+          background-color: #fff;
+          padding: 5px;
+          left: 5px;
+          top: -13px;
+          color: #929394;
+          font-size: 12.6px;
+        }
+      }
+      .wrapper {
+        position: relative;
+      }
+      .button-progress {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -12px;
+        margin-left: -12px;
+      }
+    }
+  }
+}

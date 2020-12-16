@@ -1,0 +1,16 @@
+@import "../../../../assets/scss/mixin.scss";
+.modal {
+  .paper {
+    &.upload-file-modal {
+      width: 325px;
+      .modalBody {
+        h5 {
+          font-size: 17px;
+          color: #526670;
+          margin: 0;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}

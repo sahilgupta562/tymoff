@@ -1,0 +1,74 @@
+.MuiTable-root {
+  padding-right: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding-bottom: 15px;
+  padding-right: 10px;
+  /* for all div inside table */
+  div {
+    background-color: #fff;
+    border: none !important;
+  }
+  /* only for  border-radius and layout */
+  > div {
+    border-radius: 10px;
+    overflow: hidden;
+    > div {
+      overflow: hidden;
+      border-radius: 10px;
+      &:first-child {
+        border-radius: 10px 10px 0 0;
+      }
+    }
+  }
+  /* table grid */
+  .ReactVirtualized__Grid {
+    /* checkbox */
+    .MuiCheckbox-root {
+      .MuiSvgIcon-root {
+        width: 16px !important;
+        height: 16px !important;
+      }
+    }
+    /*top right grid */
+    &.topRightGrid {
+      .MuiTableCell-root {
+        color: rgba(0, 0, 0, 0.87);
+        font-weight: bold;
+        font-size: 14px;
+        &:first-child {
+          position: sticky !important;
+          top: 0 !important;
+          left: 0 !important;
+        }
+      }
+    }
+    /*bottom right grid */
+    &.bottomRightGrid {
+      height: 150px !important;
+      .MuiTableCell-root {
+        color: #263238;
+        font-size: 14px;
+        button {
+          &.MuiButtonBase-root {
+            background-color: #bb6bd9;
+            font-size: 12px;
+            border-radius: 60px;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
+              0 1px 5px 0 rgba(0, 0, 0, 0.2);
+            height: 25px;
+            line-height: 25px;
+            padding: 0 16px;
+            letter-spacing: 0.5px;
+            color: #fff;
+          }
+        }
+        .MuiSvgIcon-root {
+          fill: #757575;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}

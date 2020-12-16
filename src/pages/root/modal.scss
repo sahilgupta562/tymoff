@@ -1,0 +1,81 @@
+@import "../../assets/scss/mixin.scss";
+
+.modal {
+  .MuiBackdrop-root {
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+  .paper {
+    border-radius: 8px;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 24px;
+    margin: 0 auto;
+    margin-top: 64px;
+    .modalContent {
+      background-color: #fff;
+      .modalHeader {
+        position: relative;
+        .modalTitle {
+          margin: 0;
+          font-size: 16px;
+          color: #526670;
+          padding-bottom: 10px;
+          font-weight: 400;
+        }
+        .close {
+          position: absolute;
+          font-size: 22px;
+          top: -4px;
+          right: 0;
+          line-height: 1em;
+          background-color: transparent;
+          box-shadow: none;
+          color: #526670;
+        }
+      }
+      .modalBody {
+        .input-field {
+          margin-top:20px;
+          margin-bottom: 10px;
+          position: relative;
+          &:nth-child(1){
+              margin-top:10px;
+          }
+        }
+        input {
+          border: 1px solid #e0e0e0;
+          padding: 8px 10px;
+          height: auto;
+          border-radius: 8px;
+          width: 100%;
+          box-sizing: border-box;
+          min-height: 40px;
+          color: #526670;
+          margin-bottom: 14px;
+          @include tab {
+            font-size: 14px !important;
+          }
+        }
+      }
+      .modalFooter {
+        display: flex;
+        justify-content: space-between;
+        .btn {
+          font-size: 15px;
+          background: #c2c2c2;
+          width: 132px;
+          line-height: 50px;
+          min-height: 48px;
+          color: #fff;
+          border-radius: 32px;
+          text-align: center;
+          letter-spacing: 0.5px;
+          box-shadow: none;
+        }
+        .createBtn {
+          background-color: #01579b;
+        }
+      }
+    }
+  }
+}
