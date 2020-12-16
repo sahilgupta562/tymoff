@@ -1,0 +1,10 @@
+@import "../../assets/scss/variables.scss";
+
+.svg-icon {
+  transition: 250ms;
+}
+
+.svg-icon.gif .primary {
+  fill: $de;
+}
+

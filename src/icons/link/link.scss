@@ -1,0 +1,16 @@
+@import "../../assets/scss/variables.scss";
+
+.svg-icon {
+  transition: 250ms;
+}
+
+.svg-icon.link .primary {
+  fill: $iw7;
+}
+
+.svg-icon.web-link .primary {
+  fill: $de;
+}
+.web-icon .svg-icon.web-link .primary {
+  fill: var(--main-color);
+}

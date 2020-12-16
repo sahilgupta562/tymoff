@@ -1,0 +1,31 @@
+$d5: #505050;
+$lp: #ea3c78;
+$d6: #606060;
+$da: #aaaaaa;
+$de: #eeeeee;
+$iw7: #707070;
+$iw5: #505050;
+$id9: #909090;
+$ida: #eeeeee;
+$bgColor:#fff;
+$detailpgIcon: #a5a5a5;
+
+// ida:Icon Dark Active
+// id9: Icon dark 909009
+// iw5: Icon Web 505050
+// iw7: Icon Web 707070
+// de: Dark eeeeee
+// da: Dark aaaaaa
+// lp: Logo Pink color
+$colors: (
+  // Default color set
+  default: (
+      backgroundColor:#fff,
+      color:#707070
+  ),
+  // Dark Theme color set
+  darkTheme: (
+    backgroundColor:#303030,
+    color:#aaa
+  )
+);

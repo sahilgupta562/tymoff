@@ -1,0 +1,50 @@
+@import "../../assets/scss/variables.scss";
+
+.svg-icon {
+  transition: 250ms;
+}
+
+.NavItem .svg-icon.home-web .primary {
+  fill: var(--main-color);
+}
+
+// .NavItem.NavItemHomes:hover .svg-icon.home-web .primary {
+//   fill: #6394b4;
+// }
+
+.NavItem.NavItemHomes.active .svg-icon.home-web .primary {
+  fill: #fff;
+}
+.drawerClose .sidebarStyle .NavItem.NavItemHomes.active .svg-icon.home-web .primary,
+.footer-navigation .MuiButtonBase-root.active .svg-icon.home-web .primary {
+  fill: var(--sidemenu-toggle-active);
+}
+
+.footer-navigation .svg-icon.home-web .primary {
+  fill: #707070;
+}
+
+.svg-icon.home-m .primary {
+  // fill: var(--svg-sidebar-color);
+  fill: $iw7;
+}
+
+.svg-icon.home-m .secoundry {
+  display: none;
+}
+
+.active .svg-icon.home-m .primary {
+  fill: $lp;
+}
+
+.active .svg-icon.home-m .secoundry {
+  fill: $lp;
+  display: block;
+}
+.dkt .active .svg-icon.home-m .primary {
+  fill: #eee;
+}
+
+.dkt .active .svg-icon.home-m .secoundry {
+  fill: #eee;
+}

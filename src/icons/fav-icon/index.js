@@ -1,0 +1,1 @@
+export { Left, Right,Down } from "./Fav-Icon";

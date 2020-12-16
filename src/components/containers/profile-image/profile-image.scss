@@ -1,0 +1,29 @@
+.profile-image-option{
+    .MuiPaper-root{
+        width: 155px;
+        display: block;
+        position: absolute;
+        top: 18% !important;
+        left: 27% !important;
+        background: var(--main-modal-bg-color);
+        color: var(--menu-btn-color-active);
+        padding: 10px 20px;
+        border-radius: 3px;
+        z-index: 4;
+    }
+    .MuiList-root{
+        padding: 0;
+        .MuiButtonBase-root{
+            font-size: 14px;
+            padding: 8px 0;
+            cursor: pointer;
+            line-height: 1;
+            &:hover{
+                background-color: transparent;
+            }
+            // &:last-child{
+            //     margin-bottom: 5px;
+            // }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@import "../../../assets/scss/mixin.scss";
+@import "../../../assets/scss/variables.scss";
+
+.basicinfo {
+  color: #606060;
+  font-size: 13px;
+  width: calc(100% - 250px);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  @include mobile {
+    padding: 0 15px 0 23px;
+    flex: 1;
+    justify-content: space-between;
+  }
+  .info {
+    width: 50%;
+    color: var(--text-color);
+    @include mobile {
+      width: auto;
+    }
+    .name {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: var(--text-color);
+      @include mobile {
+        font-size: 15px;
+        margin-bottom: 6px;
+      }
+    }
+  }
+  .editProfile {
+    max-width: 100px;
+    cursor: pointer;
+    color: var(--text-color);
+    .edit {
+      vertical-align: bottom;
+      margin-right: 5px;
+    }
+    svg {
+      @include mobile {
+        width: 18px;
+        height: 94%;
+      }
+    }
+    span {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+  .settingMobile {
+    img {
+      width: 25px;
+    }
+  }
+}

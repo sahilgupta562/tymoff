@@ -1,0 +1,59 @@
+@import "../../assets/scss/variables.scss";
+
+.svg-icon {
+  transition: 250ms;
+}
+
+.NavItem .svg-icon.country-web .primary {
+  fill: none;
+  stroke-width: 0.7982;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+
+  stroke: var(--main-color);
+}
+.NavItem .svg-icon.country-web .secondary {
+  fill: none;
+  stroke-width: 0.7982;
+  stroke-miterlimit: 10;
+  stroke: var(--main-color);
+}
+
+.NavItem.NavItemCountry:hover .svg-icon.country-web .primary {
+  fill: none;
+  stroke-width: 0.7982;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  // stroke: #6394b4;
+}
+
+.NavItem.NavItemCountry:hover .svg-icon.country-web .secondary {
+  // stroke: #6394b4;
+  fill: none;
+  stroke-width: 0.7982;
+  stroke-miterlimit: 10;
+}
+
+.NavItem.NavItemCountry.active .svg-icon.country-web .primary {
+  fill: none;
+  stroke-width: 0.7982;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke: #fff;
+}
+
+.NavItem.NavItemCountry.active .svg-icon.country-web .secondary {
+  stroke: #fff;
+  fill: none;
+  stroke-width: 0.7982;
+  stroke-miterlimit: 10;
+}
+.NavItem span .dot {
+  padding: 3px;
+  background: var(--logo-primary);
+  border-radius: 48%;
+  bottom: 0;
+  position: absolute;
+  // right: -8px;
+  right: 17px;
+}

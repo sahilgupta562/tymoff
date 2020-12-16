@@ -1,0 +1,46 @@
+@import "../../assets/scss/mixin.scss";
+@import "../../assets/scss/variables.scss";
+
+.static-page {
+  padding: 5px 45px;
+  height: 100%;
+  @include mobile-and-gplands {
+    padding: 0 15px 20px;
+  }
+
+  .text-container {
+    color: var(--text-color);
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 20px;
+
+    h2 {
+      font-size: 20px;
+      margin: 0 0 20px;
+      font-weight: normal;
+      color: var(--menu-btn-color-active);
+    }
+
+    span {
+      font-size: 13px;
+    }
+  }
+}
+
+.term-page,
+.privacy-page {
+  p {
+    font-size: 13px;
+    line-height: 22px;
+    text-align: justify;
+
+    a {
+      color: #6394b4;
+      text-decoration: none;
+    }
+
+    h3 {
+      font-weight: normal;
+    }
+  }
+}

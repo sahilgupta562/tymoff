@@ -1,0 +1,215 @@
+@import "../../../../assets/scss/mixin.scss";
+@import "../../../../assets/scss/variables.scss";
+.modal {
+  @include mobile {
+    .back-btn {
+      left: 10px;
+    }
+  }
+  .paper {
+    &.editProfileModal {
+      margin-top: 55px;
+      width: 580px;
+      min-height: auto;
+      @include mobile {
+        margin: 0;
+      }
+      .modalContent {
+        padding-top: 65px;
+        @include mobile {
+          padding: 0;
+          height: 100%;
+        }
+        .modalBody {
+          position: relative;
+          @include mobile {
+            height: 90%;
+            overflow: auto;
+            padding: 10px 10px 0;
+            .submit {
+              width: 100%;
+              margin-top: 10px;
+            }
+          }
+          .profileImage {
+            height: 130px;
+            width: 130px;
+            overflow: hidden;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            background: #fff;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            top: -130px;
+            // box-shadow: 3px 3px 4px #ddd;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            @include mobile {
+              height: 90px;
+              width: 90px;
+              top: 0;
+              position: relative;
+            }
+            img,
+            svg {
+              width: 100%;
+              height: 130px;
+              object-fit: cover;
+              background-color: var(--profile-img-bg);
+              border: 1px solid var(--profile-img-bg);
+              border-radius: 50%;
+              @include mobile {
+                height: 90px;
+              }
+            }
+            svg {
+              padding: 25px;
+            }
+
+            .MuiCircularProgress-root {
+              border-radius: 50%;
+              position: absolute;
+              svg {
+                background-color: transparent;
+                padding: 0;
+                height: auto;
+                border: none;
+              }
+            }
+            .MuiCircularProgress-colorPrimary {
+              color: $lp;
+            }
+          }
+          .change-profile {
+            text-align: center;
+            font-size: 13px;
+            margin: -6px 0 15px;
+            color: var(--menu-btn-color-active);
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            // width: 100%;
+            font-weight: 200;
+            margin: -5px auto 15px;
+            @include mobile {
+              margin: 10px 0 15px;
+              flex: 1 0 100%;
+            }
+          }
+          .edit-profile-modal-input {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .form-group {
+              margin-bottom: 20px;
+              padding-right: 5px;
+              width: 50%;
+              display: flex;
+              flex-wrap: wrap;
+              position: relative;
+              @include mobile {
+                width: 100%;
+                padding-right: 0;
+              }
+              &.fr-50 {
+                padding-left: 5px;
+                padding-right: 0;
+                @include mobile {
+                  padding-left: 0;
+                }
+              }
+              label {
+                display: block;
+                padding-bottom: 10px;
+                font-size: 14px;
+                color: var(--title);
+                width: 100%;
+                font-weight: normal;
+              }
+              p {
+                width: 20%;
+                height: 30px;
+                line-height: 30px;
+                padding-left: 3px;
+                font-size: 13px;
+                color: var(--input-text);
+                border-bottom: 1px solid var(--input-bg);
+                margin: 0;
+                background-color: var(--input-bg);
+                border-radius: 2px;
+                font-weight: normal;
+                @include mobile {
+                  height: 32px;
+                  line-height: 32px;
+                  color: var(--menu-btn-color-active);
+                  padding-left: 0;
+                  text-align: left;
+                }
+              }
+              input {
+                width: 100%;
+                height: 30px;
+                line-height: 30px;
+                font-size: 13px !important;
+                font-weight: normal;
+                color: var(--input-text);
+                border: none;
+                border-bottom: 1px solid var(--input-bg);
+                outline: 0;
+                font-family: lato;
+                padding-left: 3px;
+                background-color: var(--input-bg);
+                border-radius: 4px;
+                @include mobile {
+                  height: 32px;
+                  color: var(--menu-btn-color-active);
+                  padding-left: 0;
+                }
+                &:focus {
+                  font-size: 13px !important;
+                }
+              }
+              select {
+                width: 100%;
+                height: 30px;
+                line-height: 30px;
+                padding: 0 5px 0 0;
+                color: var(--input-text);
+                font-size: 13px !important;
+                font-family: lato;
+                font-weight: normal;
+                border: none;
+                border-bottom: 1px solid var(--input-bg);
+                outline: 0;
+                border-radius: 4px;
+                background-color: var(--input-bg);
+                @include mobile {
+                  height: 32px;
+                  color: var(--menu-btn-color-active);
+                  padding-left: 0;
+                }
+              }
+              .error {
+                position: absolute;
+                bottom: -16px;
+                margin-top: 0;
+              }
+            }
+          }
+        }
+        .modalFooter {
+          .submit {
+            width: 50%;
+            margin-bottom: 10px;
+            margin-top: 0;
+          }
+          .submit:disabled {
+            border-color: #f56e9d;
+            background-color: #f56e9d;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+}

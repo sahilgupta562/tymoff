@@ -1,0 +1,51 @@
+@import "../../../../assets/scss/mixin.scss";
+
+.modal {
+  .paper {
+    &.login-modal {
+      .modalTitle {
+        @include mobile {
+          display: none;
+        }
+      }
+      .modalBody {
+        @include mobile {
+          padding-top: 60px !important;
+        }
+        .withScan {
+          width: 48%;
+          padding: 0 2em;
+          text-align: center;
+          @include mobile {
+            display: none;
+          }
+        }
+        .orText {
+          padding: 5px 0;
+          font-size: 20px;
+          color: #606060;
+          font-weight: 400;
+          @include mobile {
+            display: none;
+          }
+        }
+        .withMobileNumber {
+          width: 48%;
+          padding: 0 42px;
+          text-align: center;
+          @include mobile {
+            width: 100%;
+          }
+        }
+        div {
+          &:last-child {
+            p a {
+              text-decoration: none;
+              color: var(--input-text);
+            }
+          }
+        }
+      }
+    }
+  }
+}

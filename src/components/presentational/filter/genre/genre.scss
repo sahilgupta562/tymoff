@@ -1,0 +1,65 @@
+@import "../../../../assets/scss/mixin.scss";
+@import "../../../../assets/scss/variables.scss";
+.filter {
+  position: relative;
+  padding: 10px 45px 0;
+  @include mobile {
+    padding: 5px 10px 0;
+  }
+  .filter-btn {
+    white-space: nowrap;
+    overflow-x: auto;
+    .f-btn {
+      box-shadow: 1px 1px 1px #ddd;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      border: 1px solid var(--menu-btn-border);
+      color: var(--menu-btn-color);
+      font-size: 13px;
+      cursor: default;
+      display: inline-block;
+      min-width: 100px;
+      text-align: center;
+      padding: 5px 24px 7px 15px;
+      border-radius: 15px;
+      position: relative;
+      margin-right: 15px;
+      background: var(--menu-btn-border);
+      @include mobile {
+        margin-top: 10px;
+      }
+      .genre-initial {
+        color: #6394b4;
+        background: var(--main-card-bg-color);
+        padding: 4px 8px 6px;
+        border-radius: 15px;
+        margin-left: -14px;
+        margin-right: 5px;
+      }
+      .text {
+        position: relative;
+        top: 1px;
+        margin-right: 5px;
+      }
+      .cancel {
+        width: 12px;
+        position: absolute;
+        cursor: pointer;
+        top: 6px;
+        color: #606060;
+        margin-right: 5px;
+        margin-left: 2px;
+        -webkit-tap-highlight-color: transparent;
+        img {
+          width: 11px;
+        }
+        button {
+          padding: 1px 2px 0px 4px;
+          svg {
+            width: 12px;
+          }
+        }
+      }
+    }
+  }
+}

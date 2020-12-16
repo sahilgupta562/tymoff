@@ -1,0 +1,124 @@
+/**************************************media query mixins**************************************/
+@import "./variables.scss";
+
+//desktop
+@mixin desktop {
+  @media only screen and (min-width: 950px) {
+    @content;
+  }
+}
+
+//tab
+
+@mixin tab {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+// Macbook
+@mixin macbook {
+  @media only screen and (max-width: 1280px) {
+    @content;
+  }
+}
+// ipad
+@mixin ipad {
+  @media only screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+//google pixel
+@mixin gp-landscape {
+  @media only screen and (min-width: 411px) and (max-width: 823px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+//mobile
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+//mobile portrait
+@mixin mobile-portrait {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+//iphone 5s/SE
+@mixin mobile-max320 {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+// Grid Mixing.
+@mixin display-grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+@mixin grid-col-row($col-start, $col-end, $row-start, $row-end) {
+  -ms-grid-column: $col-start;
+  -ms-grid-column-span: $col-end - $col-start;
+  -ms-grid-row: $row-start;
+  -ms-grid-row-span: $row-end - $row-start;
+  grid-column: #{$col-start}/#{$col-end};
+  grid-row: #{$row-start}/#{$row-end};
+}
+
+//For mobile and google landscape
+@mixin mobile-and-gplands {
+  @include gp-landscape {
+    @content;
+  }
+  @include mobile {
+    @content;
+  }
+}
+
+//For Add hover effect
+@mixin add-hover-effect {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+
+//For Remove hover effect on touch screen
+@mixin remove-hover-effect {
+  @media (hover: none), (pointer: coarse) {
+    @content;
+  }
+}
+body {
+  font-family: Lato;
+}
+.full-scroll {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.error {
+  color: $lp;
+  font-size: 11px;
+  margin-top: -5px;
+}
+
+
+@mixin color($color) {
+    background-color: map-get(map-get($colors, default), $color);
+    color:  map-get(map-get($colors, default), $color);
+
+    .dkt & {
+      background-color: map-get(map-get($colors, darkTheme), $color);  
+      color:map-get(map-get($colors, default), $color)
+    }
+}

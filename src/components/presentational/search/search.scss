@@ -1,0 +1,57 @@
+@import "../../../assets/scss/mixin.scss";
+
+.search {
+  position: "relative";
+  margin-left: 0;
+  width: "100%";
+}
+.search-field {
+  background-image: url("../../../assets/images/search-icon-w.svg");
+  @include mobile {
+    background-image: none;
+    padding-left: 0 !important;
+    margin-right: 5px !important;
+    .MuiSvgIcon-fontSizeSmall {
+      font-size: inherit;
+    }
+  }
+  .MuiSvgIcon-root {
+    display: none;
+  }
+  .MuiAutocomplete-root {
+    display: inline-block;
+    width: 90%;
+  }
+  > .MuiButtonBase-root {
+    top: 3px;
+    padding: 4px 2px 2px 4px;
+  }
+  .cross {
+    position: relative;
+    width: 12px;
+    cursor: pointer;
+    @include mobile {
+      width: 14px;
+      top: 2px;
+    }
+  }
+}
+
+.MuiAutocomplete-popper {
+  .MuiPaper-root {
+    background-color: var(--main-header-bg-color);
+    color: var(--grey-white);
+  }
+}
+
+.dkt {
+  .search-field {
+    background-image: url("../../../assets/images/search-icon.svg");
+    @include mobile {
+      background-image: none;
+    }
+    svg {
+      fill: #aaa;
+    }
+  }
+}

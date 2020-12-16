@@ -1,0 +1,54 @@
+@import "../../../../assets/scss/mixin.scss";
+@import "../../../../assets/scss/variables.scss";
+.modal {
+  .paper {
+    &.upload-notification-modal {
+      position: fixed;
+      width: 250px;
+      right: 200px;
+      background: var(--main-modal-bg-color);
+      top: 44px;
+      padding: 50px 15px 10px;
+      max-height: 90%;
+      overflow-y: auto;
+      border-radius: 4px;
+      box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(92, 69, 69, 0.12),
+        0 8px 10px -5px rgba(0, 0, 0, 0.4);
+      min-width: auto;
+      min-height: auto;
+      margin: 0;
+      .notifi-header {
+        color: var(--title);
+        background: var(--main-modal-header-bg-color);
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 -15px;
+        position: fixed;
+        top: 44px;
+        width: 250px;
+        z-index: 1;
+      }
+      .notifi {
+        display: flex;
+        padding: 10px 0 10px;
+        .sub {
+          font-size: 13px;
+          margin-right: 20px;
+          color: var(--main-color);
+          line-height: 25px;
+          text-transform: capitalize;
+          svg {
+            color: var(--main-color);
+          }
+        }
+        .noti-icons {
+          line-height: 13px;
+          .fa {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

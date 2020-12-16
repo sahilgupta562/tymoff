@@ -1,0 +1,203 @@
+@import "../../../assets/scss/mixin.scss";
+@import "../../../assets/scss/variables.scss";
+:root {
+  --main-bg-color: #fff;
+  --main-header-bg-color: #fff;
+  --main-modal-header-bg-color: #efefef;
+  --main-modal-bg-color: #fff;
+  --main-modal-secondary-bg-color: #fff;
+  --main-card-bg-color: #fff;
+  --main-color: #aaa;
+  --main-card-color: #606060;
+  --grey-white: #707070;
+  --svg-sidebar-color: #505050;
+  --modal-menu-btn-bg-color: #4b4b4b;
+  --modal-menu-btn-color: #eee;
+  --menu-btn-border: #efefef;
+  --menu-btn-color: #606060;
+  --menu-btn-bg-active: #efefef;
+  --menu-btn-color-active: #707070;
+  --input-text: #707070;
+  --select-count-lang-btn-color: #707070;
+  --select-count-lang-btn-bg: #efefef;
+}
+.dkt {
+  * {
+    box-shadow: none !important;
+    border-color: transparent !important;
+  }
+  *:focus {
+    outline: none;
+  }
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+}
+
+input,
+input:before,
+input:after,
+textarea,
+textarea:before,
+textarea:after {
+  -webkit-user-select: initial;
+  -khtml-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+  -o-user-select: initial;
+}
+
+html {
+  font-family: lato;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  padding: 0 !important;
+  background-color: var(--main-bg-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 5px;
+  @include mobile {
+    width: 3px;
+    display: none;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--verScrollBtn);
+  border-radius: 5px;
+  @include mobile {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: var(--verScrollBg);
+  @include mobile {
+    display: none;
+  }
+}
+
+.container {
+  position: relative;
+  top: 35px;
+  padding-top: 5px;
+  background: var(--main-bg-color);
+  @include desktop {
+    padding-top: 5px;
+    -webkit-transition: 0.26s ease-in-out !important;
+    transition: 0.26s ease-in-out !important;
+  }
+}
+.drawerOpen {
+  width: calc(100% - 200px);
+  left: 200px;
+  @include mobile {
+    left: 0;
+    width: 100%;
+    padding-top: 0;
+    top: 30px;
+    margin-bottom: 50px;
+    overflow: hidden;
+  }
+}
+.drawerClose {
+  width: calc(100% - 65px);
+  left: 65px;
+  @include mobile {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.mobile-hidden {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.tab-hidden {
+  @include tab {
+    display: none !important;
+  }
+}
+.sub-header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  background: var(--main-bg-color);
+  z-index: 4;
+  padding: 0 15px;
+  &.text-left {
+    justify-content: left;
+    padding-left: 50px;
+  }
+  &.space-between {
+    padding-left: 50px;
+    justify-content: space-between;
+  }
+  h1 {
+    width: 100%;
+    margin: 0;
+    // padding-left: 35px;
+    font-weight: normal;
+    font-size: 20px;
+    color: var(--menu-btn-color-active);
+  }
+  .back-btn {
+    left: 10px;
+  }
+}
+
+/*** iPhone and iOS Form Input Zoom Fixes ***/
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select,
+  textarea,
+  input {
+    font-size: 16px !important;
+  }
+}
+
+/* prevent scroll */
+.prevent-scroll {
+  @include mobile {
+    overflow: hidden;
+    overscroll-behavior: contain;
+    position: fixed;
+  }
+}

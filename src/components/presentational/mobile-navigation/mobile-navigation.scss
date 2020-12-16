@@ -1,0 +1,54 @@
+@import "../../../assets/scss/variables.scss";
+
+.MuiBottomNavigation-root.footer-navigation {
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  height: 50px;
+  background: var(--main-header-bg-color);
+  left: 0;
+  bottom: -1px;
+  padding: 0 10px;
+  align-items: center;
+  border-top: 1px solid #f7f7f7;
+  .MuiButtonBase-root {
+    padding: 0;
+    font-size: 22px;
+    text-align: center;
+    line-height: 28px;
+    position: relative;
+    max-width: 60px;
+    min-width: auto;
+    .MuiBottomNavigationAction-wrapper {
+      width: auto;
+      .MuiBottomNavigationAction-label {
+        font-size: 10px;
+        letter-spacing: 0.3px;
+        font-weight: 400;
+        color: #707070;
+        opacity: 1;
+        line-height: 1;
+        margin-top: 2px;
+      }
+    }
+    &.active {
+      .MuiBottomNavigationAction-label {
+        color: $lp;
+      }
+    }
+  }
+}
+.dkt {
+    .MuiBottomNavigation-root{
+        &.footer-navigation{
+            .MuiButtonBase-root{
+                &.active{
+                    .MuiBottomNavigationAction-label{
+                        color:#eee;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import "../../assets/scss/variables.scss";
+
+.svg-icon {
+  transition: 250ms;
+}
+
+.svg-icon.cross .primary {
+  stroke: none;
+  stroke-width: 1;
+  fill: none;
+  fill-rule: evenodd;
+  stroke-linejoin: round;
+}
+.svg-icon.cross .secondary {
+  transform: translate(6, 6);
+  stroke: $iw7;
+  stroke-width: 4;
+}

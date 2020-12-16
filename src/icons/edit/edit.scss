@@ -1,0 +1,12 @@
+@import "../../assets/scss/variables.scss";
+
+.svg-icon {
+  transition: 250ms;
+}
+
+.svg-icon.edit .primary {
+  fill: var(--text-color);
+}
+.upload-modal .svg-icon.edit .primary {
+  fill: $de;
+}

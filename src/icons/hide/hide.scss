@@ -1,0 +1,9 @@
+@import "../../assets/scss/variables.scss";
+
+.svg-icon {
+  transition: 250ms;
+}
+
+.svg-icon.hide .primary {
+  fill: $iw7;
+}

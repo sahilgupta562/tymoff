@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Disallow: beta.tymoff.com
+Sitemap: https://www.tymoff.com/sitemap.xml

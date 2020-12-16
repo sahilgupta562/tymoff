@@ -1,0 +1,96 @@
+@import "../../../../assets/scss/variables.scss";
+@import "../../../../assets/scss/mixin.scss";
+.show-more-detail-modal {
+  .show-more-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    .text-light2 {
+      width: 50%;
+      height: calc(100vh - 20px);
+      max-width: 1280px;
+      position: relative;
+      @include mobile {
+        width: 100%;
+      }
+      .back-btn {
+        z-index: 1;
+        position: absolute;
+        top: 40px;
+        left: 6px;
+        background: 0 0;
+        border: none;
+        color: #fff;
+        width: 100px;
+        height: 40px;
+        font-size: 0;
+        border-radius: 50%;
+        outline: 0;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        &:before {
+          content: "";
+          position: absolute;
+          left: 11px;
+          width: 13px;
+          height: 2px;
+          background: #ccc;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+          top: 18px;
+          -webkit-tap-highlight-color: transparent;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          left: 11px;
+          width: 13px;
+          height: 2px;
+          background: #ccc;
+          -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+          -webkit-tap-highlight-color: transparent;
+          top: 10px;
+        }
+      }
+      .textarea-light {
+        position: relative;
+        height: 100%;
+        .image-text {
+          display: flex !important;
+          justify-content: center;
+          height: 100%;
+          flex-direction: column;
+          color: #cfcfcf;
+          text-align: left;
+          padding: 0 25px;
+          >div{
+            overflow: hidden;
+            flex-wrap: wrap;
+            text-overflow: ellipsis;
+          }
+          .description {
+            font-size: 13px;
+            line-height: 30px;
+            margin-top: 10px;
+            font-family: lato-light;
+            max-height: calc(100vh - 250px);
+            overflow: auto;
+            color: #aaa !important;
+            word-break: break-word;
+            p {
+              color: #aaa !important;
+              a{
+                color: #aaa !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

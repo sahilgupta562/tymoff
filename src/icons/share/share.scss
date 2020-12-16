@@ -1,0 +1,17 @@
+@import "../../assets/scss/variables.scss";
+
+.svg-icon {
+  transition: 250ms;
+}
+
+.svg-icon.share .primary {
+  fill: none;
+  stroke: var(--main-card-color);
+  stroke-miterlimit: 10;
+}
+
+.svg-icon.share-content .primary {
+  fill: none;
+  stroke: #a5a5a5;
+  stroke-miterlimit: 10;
+}

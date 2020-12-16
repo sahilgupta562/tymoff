@@ -1,0 +1,28 @@
+@import "../../assets/scss/variables.scss";
+
+.svg-icon {
+  transition: 250ms;
+}
+
+.svg-icon.upload .primary {
+  // fill: $iw7;
+  fill: var(--main-color);
+}
+
+.svg-icon.upload-progress .primary {
+  // fill: $iw7;
+  fill: var(--main-color);
+}
+
+.svg-icon.upload-mobile .primary {
+  fill: none;
+  stroke: $iw7;
+  stroke-width: 3;
+}
+
+.svg-icon.upload-mobile .secondary {
+  fill: none;
+  stroke: $iw7;
+  stroke-width: 3;
+  stroke-linecap: round;
+}

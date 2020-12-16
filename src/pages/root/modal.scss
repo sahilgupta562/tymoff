@@ -1,0 +1,272 @@
+@import "../../assets/scss/variables.scss";
+@import "../../assets/scss/mixin.scss";
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.backdrop-transparent {
+    background-color: transparent;
+  }
+  .paper {
+    background: var(--main-modal-bg-color);
+    border-radius: 15px;
+    min-height: 450px;
+    margin: 1rem;
+    position: relative;
+    min-width: 300px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    justify-content: center;
+    @include mobile {
+      height: 100% !important;
+      width: 100vw !important;
+      margin: 0;
+      border-radius: 0;
+      overflow: hidden;
+    }
+  }
+  .paper:focus {
+    outline: none;
+  }
+
+  .w-50 {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .modalContent {
+    border-radius: 20px;
+    padding: 30px 20px 20px;
+    outline: 0 !important;
+    @include mobile {
+      padding: 0;
+    }
+    .modalBody {
+      button {
+        outline: none;
+      }
+    }
+  }
+  .modalBody {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3% 2%;
+    .ShareModal-redioBtn-290 button {
+      outline: 0;
+    }
+  }
+  .modalHeader {
+    margin-bottom: 15px;
+    text-align: center;
+    @include mobile {
+      height: 50px;
+      line-height: 52px;
+      margin: 0;
+      text-align: left;
+      padding-left: 50px;
+    }
+  }
+  .modalTitle {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: var(--menu-btn-color-active);
+    font-weight: normal;
+    @include mobile {
+      text-align: left;
+    }
+  }
+  .modalFooter {
+    text-align: center;
+  }
+  button {
+    &.submit {
+      background: $lp;
+      color: #fff;
+      border: 1px solid $lp;
+      outline: 0;
+      cursor: pointer;
+      margin-top: 25px;
+      font-size: 14px;
+      border-radius: 4px;
+      height: 35px;
+      @include mobile {
+        height: 45px !important;
+      }
+    }
+  }
+}
+/*common back-btn */
+.back-btn {
+  z-index: 1;
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  background: none;
+  border: none;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  font-size: 0;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  @include mobile {
+    top: 12px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    width: 12px;
+    height: 2px;
+    background: #909090;
+    transform: rotate(45deg);
+    top: 18px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    width: 12px;
+    height: 2px;
+    background: #909090;
+    transform: rotate(135deg);
+    top: 10px;
+  }
+  // &:hover {
+  //   background: #eee;
+  // }
+  @include mobile {
+    &::before,
+    &:after {
+      background-color: #606060;
+    }
+  }
+}
+/*common close btn*/
+.closeBtn {
+  z-index: 1;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  width: 28px;
+  height: 28px;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.closeBtn:before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  width: 18px;
+  top: 13px;
+  height: 2px;
+  background: #909090;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.closeBtn:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  width: 18px;
+  top: 13px;
+  background: #909090;
+  height: 2px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+// .closeBtn:hover {
+//   background: #eee;
+// }
+
+.b-grey {
+  background: #ddd !important;
+  border-color: #ddd !important;
+  color: $d5 !important;
+  &:hover {
+    border-color: #efefef;
+  }
+}
+input::-webkit-input-placeholder {
+  color: #c3c3c3;
+}
+
+.dialog-modal {
+  .MuiPaper-root {
+    padding: 20px 30px;
+    width: 360px;
+    border-radius: 20px;
+    color: var(--text-color);
+    background-color: var(--main-modal-bg-color);
+    .MuiDialogTitle-root {
+      padding: 0;
+      .MuiTypography-root {
+        font-size: 18px;
+        color: var(--title);
+        font-weight: 400;
+        line-height: inherit;
+      }
+    }
+    .modal-footer {
+      font-size: 13px;
+      text-align: center;
+      color: #707070;
+      padding: 0 10px;
+      max-width: 100%;
+      margin: 15px 0 0;
+      .MuiButtonBase-root {
+        font-size: 13px;
+        color: $lp;
+        // padding: 0;
+        padding: 6px 8px;
+        line-height: inherit;
+        background: none;
+        text-transform: uppercase;
+        &:hover {
+          color: #5393cf;
+        }
+      }
+    }
+  }
+}
+.dkt {
+  .modal {
+    .modalTitle {
+      color: var(--menu-btn-color-active);
+    }
+    input {
+      background: #555;
+      border-color: #555;
+      color: #eeeeee;
+    }
+  }
+  .closeBtn,
+  .back-btn {
+    &:before,
+    &:after {
+      background: #aaa;
+    }
+  }
+  .scanTitle {
+    color: #aaa;
+  }
+  .withMobileNumber {
+    h3 {
+      color: #aaa !important;
+    }
+  }
+  .enterOtp {
+    color: #aaaaaa;
+  }
+}

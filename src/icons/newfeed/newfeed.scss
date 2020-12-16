@@ -1,0 +1,12 @@
+@import "../../assets/scss/variables.scss";
+.svg-icon {
+  transition: 250ms;
+}
+
+.svg-icon.new-feed .primary {
+  fill: $lp;
+  // fill: var(--main-color);
+}
+.svg-icon.down-arrow .primary {
+  fill: $detailpgIcon;
+}
