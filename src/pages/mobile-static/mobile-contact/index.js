@@ -1,1 +1,0 @@
-export { default as MobileContact} from "./Mobile-Contact"

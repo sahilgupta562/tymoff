@@ -1,1 +1,0 @@
-export { Newfeed, DetailpgDA } from "./Newfeed";
